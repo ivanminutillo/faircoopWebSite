@@ -63,7 +63,7 @@ class LanguageSwitcher extends Component {
       <div className='languages_container' onClick={() => this.handleDropdown()}>
         <div className="languageSwitcher">
           <div className="languageSwitcher_current">
-            {this.state.language === 'en-US' ? 'English' 
+            {this.state.language === 'en-US' || this.state.language === 'it-IT' ? 'English' 
             : languages.filter(lang => this.state.language.includes(lang.code))[0].label}
           </div>
           <div className={this.state.active ? "languageSwitcher_dropdown active" : "languageSwitcher_dropdown" }>

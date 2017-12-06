@@ -63,8 +63,8 @@ class LanguageMobile extends Component {
       <div className='languages_container' onClick={() => this.handleDropdown()}>
         <div className="languageSwitcher">
           <div className="languageSwitcher_current">
-            {this.state.language === 'en-US' ? 'English' 
-            : languages.filter(lang => this.state.language.includes(lang.code))[0].label}
+          {this.state.language === 'en-US' || this.state.language === 'it-IT' ? 'English' 
+          : languages.filter(lang => this.state.language.includes(lang.code))[0].label}
           </div>
           <div className={this.state.active ? "languageSwitcher_dropdown active" : "languageSwitcher_dropdown" }>
             <h5>Select your language</h5>
